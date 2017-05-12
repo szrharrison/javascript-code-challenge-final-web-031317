@@ -5,6 +5,7 @@
     <title>JavaScript Code Challenge - Final</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
     <script type="text/javascript" src='./lib/jquery-3.2.1.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
   </head>
   <body>
     <nav class="green">
@@ -17,11 +18,25 @@
       <div class="row">
         <div class="col s4">
           <form id="photo-form">
-            <label for="image_url">Image Url</label>
-            <input type='text' name='image_url' />
-            <label for="caption">Caption</label>
-            <input type='text' name='caption' />
-            <input type='submit' />
+            <div class="row">
+              <div class="input-field col s12">
+                <input type='text' name='image_url'>
+                <label for='image_url'>Image Url</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input type='text' name='title'>
+                <label for='title'>Title</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input type='text' name='caption'>
+                <label for='caption'>Caption</label>
+              </div>
+            </div>
+            <button type='submit' class='btn green'>Submit</button>
           </form>
         </div>
 
@@ -31,6 +46,9 @@
       </div>
 
     </div>
+    <script type="text/javascript" src='src/models/Image.js'></script>
+    <script type="text/javascript" src='src/views/ImagesView.js'></script>
+    <script type="text/javascript" src='src/controllers/ImagesController.js'></script>
     <script type="text/javascript" src='src/index.js'></script>
   </body>
 </html>
